@@ -5,10 +5,17 @@
  */
 package it.sirfin.archivio.di.clienti.repository;
 
+import it.sirfin.archivio.di.clienti.model.Cliente;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Francesco Lillo
  */
-public interface NewInterface {
+@Repository
+public interface ClientiRepository extends JpaRepository<Cliente, Long>{
+    
+    
     
 }

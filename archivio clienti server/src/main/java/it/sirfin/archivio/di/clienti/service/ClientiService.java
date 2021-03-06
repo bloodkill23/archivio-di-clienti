@@ -5,10 +5,20 @@
  */
 package it.sirfin.archivio.di.clienti.service;
 
+import it.sirfin.archivio.di.clienti.dto.ListaClientiDto;
+import it.sirfin.archivio.di.clienti.model.Cliente;
+
 /**
  *
  * @author Francesco Lillo
  */
 public interface ClientiService {
+    
+    ListaClientiDto inseriscoCliente ();
+    ListaClientiDto ricercaCliente ();
+    ListaClientiDto cancellaCliente ();
+    ListaClientiDto aggiorna ();
+    
+    
     
 }
