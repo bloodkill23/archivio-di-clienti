@@ -6,8 +6,10 @@
 package it.sirfin.archivio.di.clienti.service.impl;
 
 import it.sirfin.archivio.di.clienti.dto.ListaClientiDto;
+import it.sirfin.archivio.di.clienti.model.Cliente;
 import it.sirfin.archivio.di.clienti.repository.ClientiRepository;
 import it.sirfin.archivio.di.clienti.service.ClientiService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,13 +18,15 @@ import org.springframework.stereotype.Service;
  * @author Francesco Lillo
  */
 @Service
-public class GestioneClientiServiceImpl implements  ClientiService  {
+public class GestioneClientiServiceImpl implements ClientiService {
+
     @Autowired
     ClientiRepository clientiRepository;
 
     @Override
-    public ListaClientiDto inseriscoCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaClientiDto inserisciCliente(Cliente c) {
+        clientiRepository.save(c);
+        return aggiorna();
     }
 
     @Override
@@ -37,6 +41,7 @@ public class GestioneClientiServiceImpl implements  ClientiService  {
 
     @Override
     public ListaClientiDto aggiorna() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Cliente> lista = clientiRepository.findAll();
+        return new ListaClientiDto(lista);
     }
 }

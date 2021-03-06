@@ -14,7 +14,7 @@ import it.sirfin.archivio.di.clienti.model.Cliente;
  */
 public interface ClientiService {
     
-    ListaClientiDto inseriscoCliente ();
+    ListaClientiDto inserisciCliente (Cliente c);
     ListaClientiDto ricercaCliente ();
     ListaClientiDto cancellaCliente ();
     ListaClientiDto aggiorna ();
