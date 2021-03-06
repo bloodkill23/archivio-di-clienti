@@ -45,4 +45,17 @@ public class ArchivioClientiController {
     public ListaClientiDto cancellaCliente(@RequestBody ClienteDto dto) {
         return GestioneClientiService.cancellaCliente(dto.getCliente());
     }
+
+    @RequestMapping("/reset-db")
+    @ResponseBody
+    public ListaClientiDto resetDB() {
+        throw new UnsupportedOperationException();
+    }
+
+    @RequestMapping("/aggiorna-liste")
+    @ResponseBody
+    public ListaClientiDto aggiornaListe() {
+        return GestioneClientiService.aggiorna();
+    }
+
 }
