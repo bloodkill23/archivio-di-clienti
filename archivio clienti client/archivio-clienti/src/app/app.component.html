@@ -1,0 +1,46 @@
+<input type="text" [(ngModel)]="cliente.codice" placeholder="codice">
+<br> <br>
+<input type="text" [(ngModel)]="cliente.ragioneSociale" placeholder=" Ragione sociale">
+<br> <br>
+<input type="text" [(ngModel)]="cliente.indirizzo" placeholder="indirizzo">
+<br> <br>
+<button (click)="inserisci()">Inserisci</button>
+<br> <br>
+<input type="text" [(ngModel)]="search" placeholder="ricerca per codice">
+<br><br>
+<button (click)="ricerca()">Cerca per codice</button>
+<br><br>
+<input type="text" [(ngModel)]="search" placeholder="ricerca per ragione sociale">
+<br><br>
+<button (click)="ricercaCodice()">Cerca per ragione sociale</button>
+<br><br>
+<input type="text" [(ngModel)]="search" placeholder="ricerca per indirizzo">
+<br><br>
+<button (click)="ricercaRagioneSociale()">Cerca per indirizzo </button>
+<br><br>
+<button (click)="aggiorna()">aggiorna</button>
+<br><br>
+<button (click)="confermaModifica()">conferma modifica</button>
+<br><br>
+<button (click)="annulla()">annulla modifica</button>
+<br><br>
+<br>
+<table border=3px;>
+    <tr>
+        <th>codice</th>
+        <th>ragione sociale</th>
+        <th>indirizzo</th>
+        <th>Gestisci</th>
+    </tr>
+    <tr *ngFor="let a of  vettoreClienti">
+        <td>{{a.codice}}</td>
+        <td>{{a.ragioneSociale}}</td>
+        <td>{{a.indirizzo}}</td>
+        <td>
+            <button (click)="cancellazione(a)">elimina</button>
+        </td>
+        <td>
+            <button (click)="seleziona()">seleziona</button>
+        </td>
+    </tr>
+</table>

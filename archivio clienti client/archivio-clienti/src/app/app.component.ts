@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Cliente } from './cliente';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'archivio-clienti';
+  cliente = new Cliente();
+  vettoreClienti: [] = [];
+  search="";
+  constructor(private http: HttpClient) { }
+
+  inserisci() { }
+
+  ricerca(){}
+
+  ricercaCodice(){}
+
+  ricercaRagioneSociale(){}
+
+  ricercaIndirizzo(){}
+
+  aggiorna(){}
+
+  confermaModifica(){}
+
+  annulla(){}
+
+  cancellazione(){}
+
+  seleziona(){}
+
+
+
+
 }
