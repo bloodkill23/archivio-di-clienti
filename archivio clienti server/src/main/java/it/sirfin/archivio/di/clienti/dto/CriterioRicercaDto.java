@@ -7,8 +7,8 @@ package it.sirfin.archivio.di.clienti.dto;
 
 /**
  *
- * @author Francesco Lillo
+ * @author aleur
  */
-public class NewClass {
+public class CriterioRicercaDto {
     
 }

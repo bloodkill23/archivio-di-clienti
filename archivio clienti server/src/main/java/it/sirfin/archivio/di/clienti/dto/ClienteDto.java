@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.sirfin.archivio.di.clienti.model;
+package it.sirfin.archivio.di.clienti.dto;
 
 /**
  *
  * @author Francesco Lillo
  */
-public class NewClass {
+public class ClienteDto {
     
 }
