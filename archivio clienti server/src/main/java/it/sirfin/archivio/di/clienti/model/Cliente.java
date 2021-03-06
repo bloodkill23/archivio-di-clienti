@@ -9,7 +9,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 /**
  *
@@ -19,7 +19,7 @@ import org.springframework.data.annotation.Id;
 public class Cliente implements Serializable{
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     @Column
     private String codice;
     @Column
