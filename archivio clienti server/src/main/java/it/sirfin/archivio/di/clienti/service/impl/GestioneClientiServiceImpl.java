@@ -30,13 +30,15 @@ public class GestioneClientiServiceImpl implements ClientiService {
     }
 
     @Override
-    public ListaClientiDto ricercaCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaClientiDto ricercaCliente(String criterio) {
+        List<Cliente> lista = clientiRepository.findByCodiceContainsOrIndirizzoContainsOrRagioneSocialeContains(criterio);
+        return new ListaClientiDto(lista);
     }
 
     @Override
-    public ListaClientiDto cancellaCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ListaClientiDto cancellaCliente(Cliente cl) {
+        clientiRepository.delete(cl);
+        return aggiorna();
     }
 
     @Override
