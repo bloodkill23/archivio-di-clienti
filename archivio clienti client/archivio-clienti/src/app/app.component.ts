@@ -44,7 +44,13 @@ export class AppComponent {
 
   annulla() { }
 
-  cancellazione() { }
+  cancellazione(clienteDaRimuovere: Cliente) {
+    let dto = new ClienteDto();
+    dto.cliente = clienteDaRimuovere;
+    let os = this.http.post<ListaClienteDto>("http://localhost8080/cancellaCliente", dto
+    );
+    os.subscribe(r => this.vettoreClienti = r.listaCliente);
+  }
 
   seleziona() { }
 
