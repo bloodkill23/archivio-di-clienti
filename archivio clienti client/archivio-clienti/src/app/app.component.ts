@@ -14,7 +14,9 @@ export class AppComponent {
   cliente = new Cliente();
   vettoreClienti: Cliente[] = [];
   search = "";
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.aggiorna();
+  }
 
   inserisci() {
     let dto = new ClienteDto();
@@ -33,7 +35,10 @@ export class AppComponent {
     ox.subscribe(v => this.vettoreClienti = v.listaCliente);
   }
 
-  aggiorna() { }
+  aggiorna() {
+    this.http.get<ListaClienteDto>("http://localhost:8080/aggiorna-liste")
+      .subscribe(v => this.vettoreClienti = v.listaCliente);
+  }
 
   confermaModifica() { }
 
@@ -43,7 +48,7 @@ export class AppComponent {
 
   seleziona() { }
 
-
+  resetDB() { }
 
 
 }
