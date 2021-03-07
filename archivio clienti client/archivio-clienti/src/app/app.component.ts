@@ -40,10 +40,6 @@ export class AppComponent {
       .subscribe(v => this.vettoreClienti = v.listaCliente);
   }
 
-  confermaModifica() { }
-
-  annulla() { }
-
   cancellazione(clienteDaRimuovere: Cliente) {
     let dto = new ClienteDto();
     dto.cliente = clienteDaRimuovere;
@@ -52,7 +48,20 @@ export class AppComponent {
     os.subscribe(r => this.vettoreClienti = r.listaCliente);
   }
 
-  seleziona() { }
+  seleziona() {
+    this.cliente = new Cliente();
+  }
+
+  confermaModifica() {
+    this.vettoreClienti.push(this.cliente);
+  }
+
+  annulla() {
+    this.cliente = new Cliente();
+  }
+
+
+
 
   resetDB() { }
 
