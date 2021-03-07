@@ -17,12 +17,6 @@ export class AppComponent {
 
   ricerca(){}
 
-  ricercaCodice(){}
-
-  ricercaRagioneSociale(){}
-
-  ricercaIndirizzo(){}
-
   aggiorna(){}
 
   confermaModifica(){}
