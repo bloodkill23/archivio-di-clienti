@@ -31,7 +31,7 @@ public class GestioneClientiServiceImpl implements ClientiService {
 
     @Override
     public ListaClientiDto ricercaCliente(String criterio) {
-        List<Cliente> lista = clientiRepository.findByCodiceContainsOrIndirizzoContainsOrRagioneSocialeContains(criterio);
+        List<Cliente> lista = clientiRepository.findByCodiceContainsOrIndirizzoContainsOrRagioneSocialeContains(criterio,criterio,criterio);
         return new ListaClientiDto(lista);
     }
 

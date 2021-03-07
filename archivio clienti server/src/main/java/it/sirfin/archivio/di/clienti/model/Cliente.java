@@ -30,8 +30,7 @@ public class Cliente implements Serializable{
     public Cliente() {
     }
 
-    public Cliente(long id, String codice, String ragioneSociale, String indirizzo) {
-        this.id = id;
+    public Cliente( String codice, String ragioneSociale, String indirizzo) {
         this.codice = codice;
         this.ragioneSociale = ragioneSociale;
         this.indirizzo = indirizzo;
